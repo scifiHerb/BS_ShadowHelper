@@ -1,4 +1,6 @@
 # BS_ShadowHelper
+![Beat Saber 2023 10 01 - 11 33 35 01 mp4_snapshot_04 25 953](https://github.com/scifiHerb/BS_ShadowHelper/assets/109839172/a0444570-22f8-402d-8d86-aeedf6cec9f9)
+![Beat Saber 2023 10 01 - 11 33 35 01 mp4_snapshot_04 46 053](https://github.com/scifiHerb/BS_ShadowHelper/assets/109839172/f4b5ce70-85fc-4e6a-bf99-010a1f2fdc7d)
 # 説明
 ビートセイバーに影を追加するMODです。
 Modsettingsで影の方向や光の強さ、影の解像度などの変更ができます。  
@@ -24,5 +26,3 @@ Bloom使用時は付属のテスト用プラットフォーム及びカスタム
   "lightShadows": "Hard",  (Hard / Soft)はっきりした影か柔らかな影かですHardのほうが軽いそうです  
   "overrideCustomAvatarMaterials": true  カスタムアバターのアバターはデフォルトのシェーダーだと影でない様なのでその場合シェーダーを置き換えるかどうかです、具体的には"BeatSaber/Unlit Glow"を置き換えてます。  
 }
-![Beat Saber 2023 10 01 - 11 33 35 01 mp4_snapshot_04 25 953](https://github.com/scifiHerb/BS_ShadowHelper/assets/109839172/a0444570-22f8-402d-8d86-aeedf6cec9f9)
-![Beat Saber 2023 10 01 - 11 33 35 01 mp4_snapshot_04 46 053](https://github.com/scifiHerb/BS_ShadowHelper/assets/109839172/f4b5ce70-85fc-4e6a-bf99-010a1f2fdc7d)
