@@ -1,0 +1,10 @@
+<settings-container>
+	<checkbox text='Enable' value='enable'></checkbox>
+	<dropdown-list-setting text ='shadowType' value ='shadowType-choice' choices='shadowType-options'/>
+	<slider-setting text='direLightRotationX' min='0' max='360' increment='1' show-buttons='true' apply-on-change='true' set-event='changeDireRot' value='direLightRotationX'/>
+	<slider-setting text='direLightRotationY' min='0' max='360' increment='1' show-buttons='true' apply-on-change='true' set-event='changeDireRot' value='direLightRotationY'/>
+	<slider-setting text='direLightRotationZ' min='0' max='360' increment='1' show-buttons='true' apply-on-change='true' set-event='changeDireRot' value='direLightRotationZ'/>
+	<slider-setting text='shadowResolution' min='0' max='20000' increment='512' integer-only='true' show-buttons='true' apply-on-change='true' value='shadowResolution'/>
+	<checkbox text='usingPlatformLight' value='usingPlatLight'></checkbox>
+	<checkbox text='overrideCustomAvatarMaterials' value='overrideCustomAvatarMaterials'></checkbox>
+</settings-container>
