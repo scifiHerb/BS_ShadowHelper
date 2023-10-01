@@ -5,6 +5,6 @@
 	<slider-setting text='direLightRotationY' min='0' max='360' increment='1' show-buttons='true' apply-on-change='true' set-event='changeDireRot' value='direLightRotationY'/>
 	<slider-setting text='direLightRotationZ' min='0' max='360' increment='1' show-buttons='true' apply-on-change='true' set-event='changeDireRot' value='direLightRotationZ'/>
 	<slider-setting text='shadowResolution' min='0' max='20000' increment='512' integer-only='true' show-buttons='true' apply-on-change='true' value='shadowResolution'/>
-	<checkbox text='usingPlatformLight' value='usingPlatLight'></checkbox>
+	<slider-setting text='intensity' min='0' max='2' increment='0.1' integer-only='false' show-buttons='true' apply-on-change='true' value='intensity'/>
 	<checkbox text='overrideCustomAvatarMaterials' value='overrideCustomAvatarMaterials'></checkbox>
 </settings-container>

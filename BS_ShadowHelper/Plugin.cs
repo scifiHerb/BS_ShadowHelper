@@ -45,7 +45,7 @@ namespace BS_ShadowHelper
             Log.Info("BSLight initialized.");
             Settings.Settings.Instance = conf.Generated<Settings.Settings>();
             BSMLSettings.instance.AddSettingsMenu("BS_ShadowHelper", "BS_ShadowHelper.Configuration.settings.bsml", SettingsHandler.instance);
-
+            if (Settings.Settings.Instance.enable == false) return;
 
             BS_Utils.Utilities.BSEvents.gameSceneActive += onGameScene;
             BS_Utils.Utilities.BSEvents.menuSceneActive += onMenuScene;
@@ -68,14 +68,13 @@ namespace BS_ShadowHelper
 
         public void refreshLight()
         {
+            if (Settings.Settings.Instance.enable == false) return;
             createLight(ref menuLightObj);
             createLight(ref gameLightObj);
 
         }
         public void createLight(ref GameObject lightObj)
         {
-            if (Settings.Settings.Instance.usingPlatLight) return;
-
             if (lightObj == null)
             {
                 lightObj = new GameObject("BS_ShadowHelperLight");
@@ -86,6 +85,9 @@ namespace BS_ShadowHelper
             Light directionalLight = lightObj.GetComponent<Light>();
 
             lightObj.transform.SetParent(null);
+
+            //ライトの強度
+            directionalLight.intensity = Settings.Settings.Instance.intensity;
 
             // ライトの方向
             lightObj.transform.localEulerAngles = new Vector3(Settings.Settings.Instance.direLightRotationX, Settings.Settings.Instance.direLightRotationY, Settings.Settings.Instance.direLightRotationZ); // オプションで方向を設定
@@ -113,10 +115,10 @@ namespace BS_ShadowHelper
         {
             createLight(ref menuLightObj);
             searchAvatarsPlatforms();
-            if (avatarRoot != null && Settings.Settings.Instance.overrideCustomAvatarMaterials)
+            if (avatarRoot != null)
             {
                 updateAllLayer(avatarRoot.transform, 10);
-                modifyAvatarShader(avatarRoot.transform);
+                if (Settings.Settings.Instance.overrideCustomAvatarMaterials) modifyAvatarShader(avatarRoot.transform);
             }
         }
         public void onSongPaused()
@@ -128,10 +130,10 @@ namespace BS_ShadowHelper
             createLight(ref gameLightObj);
 
             searchAvatarsPlatforms();
-            if (avatarRoot != null && Settings.Settings.Instance.overrideCustomAvatarMaterials)
+            if (avatarRoot != null)
             {
                 updateAllLayer(avatarRoot.transform, 10);
-                modifyAvatarShader(avatarRoot.transform);
+                if (Settings.Settings.Instance.overrideCustomAvatarMaterials) modifyAvatarShader(avatarRoot.transform);
             }
         }
         private void updateAllLayer(Transform parentTransform, int layer)

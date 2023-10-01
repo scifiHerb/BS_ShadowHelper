@@ -75,14 +75,14 @@ namespace BS_ShadowHelper.Settings
                 Settings.Instance.direLightRotationZ = value;
             }
         }
-        [UIValue("usingPlatLight")]
-        private bool usingPlatLight
+        [UIValue("intensity")]
+        private float intensity
         {
-            get => Settings.Instance.usingPlatLight;
+            get => Settings.Instance.intensity;
             set
             {
                 Plugin.Instance.refreshLight();
-                Settings.Instance.usingPlatLight = value;
+                Settings.Instance.intensity = value;
             }
         }
         [UIValue("overrideCustomAvatarMaterials")]

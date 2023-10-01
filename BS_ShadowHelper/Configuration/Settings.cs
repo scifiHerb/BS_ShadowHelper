@@ -14,10 +14,10 @@ namespace BS_ShadowHelper.Settings
         public float direLightRotationX = 30F;
         public float direLightRotationY = 0F;
         public float direLightRotationZ = 0F;
+        public float intensity = 1F;
 
         public int shadowResolution = 10000;
         public string lightShadows = "Hard";
-        public bool usingPlatLight = false;
         public bool overrideCustomAvatarMaterials = true;
     }
 }
